@@ -60,9 +60,11 @@ const Login: React.FC = () => {
 
       <div className="login-card-wrapper">
         <div className="login-logo">
-          <div className="logo-glow"></div>
-          <span className="logo-text">CHLOSE</span>
-          <span className="logo-subtext">IDENTITY</span>
+          <img src="/logo.png" alt="CHLOSE Logo" className="login-logo-img" />
+          <div className="login-logo-text-group">
+            <span className="logo-text">CHLOSE</span>
+            <span className="logo-subtext">IDENTITY</span>
+          </div>
         </div>
 
         <GlassCard className="login-form-card">

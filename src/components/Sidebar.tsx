@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  User as UserIcon, 
-  ShieldCheck, 
-  Wallet, 
-  AppWindow, 
+import {
+  LayoutDashboard,
+  User as UserIcon,
+  ShieldCheck,
+  Wallet,
+  AppWindow,
   Activity,
   LogOut,
   ChevronRight
@@ -16,7 +16,7 @@ import './Sidebar.css';
 const Sidebar: React.FC = () => {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
-  
+
   const navItems = [
     { name: 'Overview', path: '/', icon: <LayoutDashboard size={20} /> },
     { name: 'Account', path: '/account', icon: <UserIcon size={20} /> },
@@ -35,17 +35,19 @@ const Sidebar: React.FC = () => {
     <aside className="glass-sidebar sidebar">
       <div className="sidebar-header">
         <div className="logo-container">
-          <div className="logo-glow"></div>
-          <span className="logo-text">CHLOSE</span>
-          <span className="logo-subtext">CONSOLE</span>
+          <img src="/logo.png" alt="CHLOSE Logo" className="logo-img" />
+          <div className="logo-text-group">
+            <span className="logo-text">CHLOSE</span>
+            <span className="logo-subtext">CONSOLE</span>
+          </div>
         </div>
       </div>
 
       <nav className="sidebar-nav">
         {navItems.map((item) => (
-          <NavLink 
-            key={item.path} 
-            to={item.path} 
+          <NavLink
+            key={item.path}
+            to={item.path}
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-icon">{item.icon}</span>
