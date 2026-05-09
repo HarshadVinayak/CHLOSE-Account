@@ -8,7 +8,11 @@ import {
   AppWindow,
   Activity,
   LogOut,
-  ChevronRight
+  ChevronRight,
+  HelpCircle,
+  FileText,
+  Shield,
+  RefreshCcw
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
@@ -24,6 +28,13 @@ const Sidebar: React.FC = () => {
     { name: 'Wallet', path: '/wallet', icon: <Wallet size={20} /> },
     { name: 'Connected Apps', path: '/apps', icon: <AppWindow size={20} /> },
     { name: 'Activity', path: '/activity', icon: <Activity size={20} /> },
+  ];
+
+  const supportItems = [
+    { name: 'Contact Support', path: '/contact', icon: <HelpCircle size={20} /> },
+    { name: 'Privacy Policy', path: '/privacy', icon: <Shield size={20} /> },
+    { name: 'Terms of Service', path: '/terms', icon: <FileText size={20} /> },
+    { name: 'Refund Policy', path: '/refund', icon: <RefreshCcw size={20} /> },
   ];
 
   const handleSignOut = async () => {
@@ -53,6 +64,22 @@ const Sidebar: React.FC = () => {
             <span className="nav-icon">{item.icon}</span>
             <span className="nav-name">{item.name}</span>
             <ChevronRight className="nav-chevron" size={16} />
+          </NavLink>
+        ))}
+      </nav>
+
+      <div className="sidebar-divider"></div>
+
+      <nav className="sidebar-nav support-nav">
+        <div className="nav-section-title">Support & Legal</div>
+        {supportItems.map((item) => (
+          <NavLink
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) => `nav-item support-item ${isActive ? 'active' : ''}`}
+          >
+            <span className="nav-icon">{item.icon}</span>
+            <span className="nav-name">{item.name}</span>
           </NavLink>
         ))}
       </nav>

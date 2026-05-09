@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GlassCard from '../components/GlassCard';
-import { User, Mail, MapPin, Globe, Save, Loader2 } from 'lucide-react';
+import { User, Mail, MapPin, Globe, Save, Loader2, Award, Zap } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../hooks/useProfile';
 import './Account.css';
@@ -155,6 +155,25 @@ const Account: React.FC = () => {
                 <span>Data Sync Sharing</span>
                 <div className="toggle active"></div>
               </div>
+            </div>
+          </GlassCard>
+
+          <GlassCard className="subscription-card" style={{ marginTop: '20px' }}>
+            <div className="sub-header" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
+              <Award className="glow-text-eco" size={24} />
+              <h3 style={{ margin: 0, fontSize: '1.1rem' }}>Subscription</h3>
+            </div>
+            <div className="current-plan" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.05)', padding: '12px', borderRadius: '10px', marginBottom: '15px' }}>
+              <span className="plan-name" style={{ fontWeight: 600 }}>Bronze Tier</span>
+              <span className="plan-badge" style={{ fontSize: '0.7rem', padding: '2px 8px', background: 'var(--accent-eco)', color: '#000', borderRadius: '4px', fontWeight: 700 }}>FREE</span>
+            </div>
+            <p className="sub-note" style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>Enjoying baseline ecosystem features.</p>
+            <button className="upgrade-btn" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid var(--accent-eco)', background: 'rgba(0,255,157,0.1)', color: 'var(--accent-eco)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer' }}>
+              <Zap size={16} />
+              Upgrade to Silver
+            </button>
+            <div className="sub-footer" style={{ marginTop: '15px', textAlign: 'center' }}>
+              <a href="/refund" style={{ fontSize: '0.75rem', color: 'var(--accent-blue)', textDecoration: 'none' }}>Manage Policies</a>
             </div>
           </GlassCard>
         </div>

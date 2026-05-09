@@ -10,6 +10,10 @@ import Wallet from './pages/Wallet';
 import ConnectedApps from './pages/ConnectedApps';
 import Activity from './pages/Activity';
 import Login from './pages/Login';
+import PrivacyPolicy from './pages/legal/PrivacyPolicy';
+import TermsConditions from './pages/legal/TermsConditions';
+import Contact from './pages/legal/Contact';
+import RefundPolicy from './pages/legal/RefundPolicy';
 import './App.css';
 
 const App: React.FC = () => {
@@ -33,6 +37,10 @@ const App: React.FC = () => {
                     <Route path="/wallet" element={<Wallet />} />
                     <Route path="/apps" element={<ConnectedApps />} />
                     <Route path="/activity" element={<Activity />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="/terms" element={<TermsConditions />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/refund" element={<RefundPolicy />} />
                   </Routes>
                 </main>
                 

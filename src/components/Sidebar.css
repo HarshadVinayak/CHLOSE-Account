@@ -110,6 +110,32 @@
   opacity: 0.5;
 }
 
+.sidebar-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 10px 30px;
+}
+
+.nav-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  opacity: 0.5;
+}
+
+.support-nav {
+  flex: 0;
+  margin-bottom: 20px;
+}
+
+.support-item {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
 .sidebar-footer {
   padding: 0 20px;
   margin-top: auto;
