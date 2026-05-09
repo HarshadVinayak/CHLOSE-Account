@@ -1,0 +1,141 @@
+.apps-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.app-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 255, 157, 0.1);
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.app-icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-status-badge {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.app-status-badge.active {
+  background: rgba(0, 255, 157, 0.1);
+  color: var(--accent-eco);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+}
+
+.app-name {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.app-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.app-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* Futuristic Green Buttons */
+.launch-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-eco);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.launch-btn:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 157, 0.5);
+  transform: translateY(-2px);
+}
+
+.manage-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manage-btn:hover {
+  background: rgba(0, 255, 157, 0.05);
+  border-color: var(--accent-eco);
+  color: var(--accent-eco);
+}
+
+.apps-footer-note {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

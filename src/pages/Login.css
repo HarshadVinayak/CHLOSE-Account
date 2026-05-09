@@ -1,0 +1,237 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.glow-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.15;
+}
+
+.glow-orb.eco {
+  background: var(--accent-eco);
+  top: -100px;
+  left: -100px;
+  animation: orb-float 20s infinite ease-in-out;
+}
+
+.glow-orb.blue {
+  background: var(--accent-blue);
+  bottom: -100px;
+  right: -100px;
+  animation: orb-float 25s infinite ease-in-out reverse;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(50px, 50px); }
+}
+
+.login-card-wrapper {
+  width: 100%;
+  max-width: 420px;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.login-logo .logo-text {
+  font-size: 2.5rem;
+  letter-spacing: 10px;
+  font-weight: 800;
+}
+
+.login-logo .logo-subtext {
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: var(--accent-eco);
+  margin-top: -5px;
+}
+
+.login-form-card {
+  width: 100%;
+  padding: 40px;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auth-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 15px 0 20px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.sent-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sent-state .eco {
+  margin-bottom: 20px;
+}
+
+.auth-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 59, 48, 0.1);
+  border: 1px solid rgba(255, 59, 48, 0.3);
+  border-radius: 10px;
+  color: #ff3b30;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.google-login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.google-login-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--glass-border);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--accent-eco);
+  background: rgba(0, 255, 157, 0.02);
+}
+
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 255, 157, 0.1);
+  color: var(--accent-eco);
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-submit-btn:hover {
+  background: rgba(0, 255, 157, 0.2);
+  transform: translateY(-2px);
+}
+
+.login-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.trust-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--accent-eco);
+  opacity: 0.8;
+}
+
+.login-promo {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.promo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

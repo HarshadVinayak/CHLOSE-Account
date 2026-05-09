@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #070708;
+  --bg-card: rgba(18, 18, 20, 0.7);
+  --accent-eco: #00ff9d;
+  --accent-blue: #00d1ff;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --sidebar-width: 260px;
+  --glow-eco: 0 0 20px rgba(0, 255, 157, 0.2);
+  --glow-blue: 0 0 20px rgba(0, 209, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-sidebar {
+  background: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--glass-border);
+}
+
+/* Animations */
+@keyframes pulse-eco {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.pulse-eco {
+  animation: pulse-eco 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Layout Classes */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  background-image: url('./assets/console_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 80px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    padding-top: 80px;
+  }
+}
+
+/* Global Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.glow-text-eco {
+  color: var(--accent-eco);
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+.glow-text-blue {
+  color: var(--accent-blue);
+  text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
