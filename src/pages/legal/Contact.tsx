@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageSquare, Phone, MapPin, Send, HelpCircle, Briefcase, Code } from 'lucide-react';
+import { Mail, MessageSquare, Phone, Send, HelpCircle, Briefcase, Code } from 'lucide-react';
 import './LegalPages.css';
 
 const Contact: React.FC = () => {

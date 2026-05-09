@@ -1,5 +1,5 @@
 import React from 'react';
-import { RefreshCcw, XCircle, CreditCard, Award, ShieldAlert, CheckCircle } from 'lucide-react';
+import { RefreshCcw, XCircle, CreditCard, Award, ShieldAlert } from 'lucide-react';
 import './LegalPages.css';
 
 const RefundPolicy: React.FC = () => {
